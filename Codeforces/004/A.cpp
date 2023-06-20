@@ -17,7 +17,7 @@ void solve() {
   else {
     cout << "NO" << endl;
   }
-	
+	// changed file
 }
 int main(void) {
 	ios_base::sync_with_stdio(0);
