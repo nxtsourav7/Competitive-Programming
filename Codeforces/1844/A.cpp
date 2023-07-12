@@ -13,15 +13,7 @@ int main() {
 
         cin >> a >> b;
 
-        if(a!=1) {
-            cout << "1\n";
-        }
-        else if(a==1 && b==2){
-            cout << "3\n";
-        }
-        else {
-            cout << "2\n";
-        }
+        cout << a+b << '\n';
     }
 
 
