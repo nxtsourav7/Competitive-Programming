@@ -1,7 +1,7 @@
 /*
 *	author 	: nxtsourav7
-*	problem : 
-*	created : 
+*	problem : Weired Algorithm
+*	created : 2023-08-03 16:30:50
 */
 
 #include<bits/stdc++.h>
