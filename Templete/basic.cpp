@@ -11,6 +11,7 @@ using namespace std;
 #define ll long long
 #define ld long double
 #define read(x) int x;cin >> x
+#define sz(a) (int)(a).size()
 #define all(x) (x).begin(),(x).end()
 
 /* CONSTANT */
