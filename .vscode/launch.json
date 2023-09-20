@@ -7,8 +7,8 @@
         "request": "launch",
         "program": "${fileDirname}/${fileBasenameNoExtension}.out",
         "args": [
-            "<${fileDirname}//input.txt",
-            ">${fileDirname}//output.txt"
+            "<${fileDirname}//input.txt"
+            // ">${fileDirname}//output.txt"
             // input from file
         ],
         "stopAtEntry": false,
