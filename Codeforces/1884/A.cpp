@@ -1,6 +1,6 @@
 /*
 *	author 	: nxtsourav7
-*	problem : 
+*	problem : Simple design
 *	created :
 */
 
