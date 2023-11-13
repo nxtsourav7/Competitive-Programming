@@ -7,7 +7,7 @@
         "request": "launch",
         "program": "${fileDirname}/${fileBasenameNoExtension}.out",
         "args": [
-            "<${fileDirname}//input.txt"
+            // "<${fileDirname}//input.txt"
             // ">${fileDirname}//output.txt"
             // input from file
         ],
@@ -17,6 +17,7 @@
         "externalConsole": false,
         "MIMode": "gdb",
         "miDebuggerPath": "/usr/bin/gdb",
+        "miDebuggerArgs": "-q -ex quit; wait() { fg >/dev/null; }; /bin/gdb -q --interpreter=mi",
         "setupCommands": [
           {
             "description": "Enable pretty-printing for gdb",
