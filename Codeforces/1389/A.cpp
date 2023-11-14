@@ -8,7 +8,7 @@
 using namespace std;
 
 
-void deal_with() {
+void d0() {
 	int l , r;
     cin >> l >> r;
 
@@ -28,7 +28,7 @@ int main(void) {
 	cin >> tc;
 	for(int t=1 ; t<=tc ; t++) {
 		// cout << "case #" << t << ": ";
-		deal_with();
+		d0();
         cout << "\n";
 	}
 
