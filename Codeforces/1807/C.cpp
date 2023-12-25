@@ -1,7 +1,7 @@
 /**
  *	author 	: nxtsourav7
- *	problem : 
- *	created : 
+ *	problem : Find and Replace
+ *	created : 2023-12-25 23:04:42
 **/
 
 #include<bits/stdc++.h>
@@ -25,7 +25,25 @@ int T=1;
 
 
 auto solve = []() {
-	
+	int n;
+    string s;
+    cin >> n >> s;
+
+    vi alph(26,-1);
+    for(int i=0; i<n; ++i) {
+        int idx = s[i]-'a';
+        if(alph[idx]==-1) {
+            alph[idx] = i%2;
+        }
+        else {
+            if(alph[idx]!=i%2) {
+                cout << "NO";
+                return;
+            }
+        }   
+    }
+
+    cout << "YES";
 };
 
 

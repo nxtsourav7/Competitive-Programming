@@ -5,3 +5,5 @@
 #executable
 *.out
 *.exe
+
+.vscode

@@ -1,7 +1,7 @@
 /**
  *	author 	: nxtsourav7
- *	problem : 
- *	created : 
+ *	problem : Odd Queries
+ *	created : 2023-12-26 01:30:17
 **/
 
 #include<bits/stdc++.h>
@@ -25,7 +25,28 @@ int T=1;
 
 
 auto solve = []() {
-	
+	int n,q;
+    cin >> n >> q;
+    vi v(n);
+    each(v) cin >> it;
+
+    int sum = v[0];
+    vi pre_sum(n+1,0);
+    pre_sum[1] = v[0];
+    for(int i=1; i<n; ++i) {
+        pre_sum[i+1] = sum+v[i];
+        sum += v[i];
+    }
+
+    while(q--) {
+        int l,r,k;
+        cin >> l >> r >> k;
+
+        int ans = pre_sum[l-1] + sum-pre_sum[r] + (r-l+1)*k;
+
+        if(ans&1) cout << "YES\n";
+        else cout << "NO\n";       
+    }
 };
 
 
@@ -35,7 +56,7 @@ int32_t main() {
 	for(int t=1; t<=T; ++t) {
 		// cout << "Case #" << t << ": ";
 		solve();
-        cout << endl;
+        // cout << endl;
 	}
 	return 0;
 }
