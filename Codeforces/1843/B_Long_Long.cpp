@@ -49,8 +49,6 @@ auto solve = []() {
     }
 
     cout << sum << " " << cnt;
-
-
 };
 
 
