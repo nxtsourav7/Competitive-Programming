@@ -1,6 +1,6 @@
 /**
  *	author 	: nxtsourav7
- *	created : 
+ *	created : 2023-12-27 19:34:57
 **/
 
 #include<bits/stdc++.h>
@@ -25,7 +25,20 @@ using namespace std;
 
 
 auto solve = []() {
-	
+	vi v(3);
+    each(v) cin >> it;
+
+    int k = 3;
+    int min_val = *min_element(all(v));
+    for(int i=0; i<3; ++i) {
+        if(v[i]%min_val!=0) {
+            cout << "NO";
+            return;
+        }
+        k -= (v[i]/min_val-1);
+    }
+
+    cout << (k>=0? "YES":"NO");
 };
 
 
