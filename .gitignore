@@ -6,4 +6,6 @@
 *.out
 *.exe
 
+#folder
 .vscode
+.cph
