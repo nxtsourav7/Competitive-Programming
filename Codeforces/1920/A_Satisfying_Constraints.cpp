@@ -57,27 +57,13 @@ auto solve = []() {
         }
     }
 
-
     int cnt = 0;
-    
-    // for(int i=mx1; i<=mn2; ++i) {
-    //     if(find(v.begin(), v.end(), i) != v.end()) {
-    //         cnt++;
-    //     }
-    // }
-
     each(v) {
-        if(it>=mx1 && it<=mn2) {
+        if(it>=mx1 and it<=mn2) {
             cnt++;
         }
     }
-
-    if(mn2<mx1) {
-        cout << 0;
-    }
-    else {
-        cout << mn2-mx1+1-cnt;
-    }
+    cout << max(0LL,mn2-mx1+1-cnt);
 };
 
 
