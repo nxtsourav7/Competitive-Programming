@@ -1,23 +1,19 @@
 /**
  *	author 	: nxtsourav7
- *	created : 
+ *	problem : The number on the board
+ *	created : 2023-12-21 00:54:03
 **/
 
 #include<bits/stdc++.h>
-long long int T = 1;
 using namespace std;
 
 
-#define endl '\n'
-#define ff first 
-#define ss second
+#define endl "\n"
 #define int long long 
 #define double long double
 
 
 #define vi vector<int>
-#define pii pair<int,int>
-#define vpii vector<pii>
 #define sz(x) (int)x.size()
 #define each(x) for(auto &it:x)
 #define all(x) (x).begin(),(x).end()
@@ -25,30 +21,26 @@ using namespace std;
 #define fastIO cin.tie(0)->sync_with_stdio(0)
 
 
-#define read(n) int n;cin >> n;
-#define inVec(x,n) vi x(n);each(x) cin >> it;
+int T=1;
 
 
 auto solve = []() {
-	char over[7];
-    for(int i=1; i<=6; ++i) cin >> over[i];
+	int k,n;
+    cin >> k >> n;
 
-    int cnt = 0,ans = 0;
-    for(int i=1; i<=6; ++i) {
-        if(over[i]=='W') {
-            if(over[i-1]=='W') cnt++;
-            else cnt = 1;
-        }
-        ans = max(ans,cnt);
+    int di_sum = 0;
+    while(n) {
+        di_sum += n%10;
+        n /= 10;
     }
 
-    cout << (ans>=3? "YES":"NO");
+    cout << max((int)0,(k-di_sum));
 };
 
 
 int32_t main() {
 	fastIO;
-	cin >> T;
+	// cin >> T;
 	for(int t=1; t<=T; ++t) {
 		// cout << "Case #" << t << ": ";
 		solve();

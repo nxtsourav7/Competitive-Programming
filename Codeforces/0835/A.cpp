@@ -1,23 +1,19 @@
 /**
  *	author 	: nxtsourav7
- *	created : 2024-01-14 00:14:13
+ *	problem : Key races
+ *	created : 2023-12-21 00:34:19
 **/
 
 #include<bits/stdc++.h>
-long long int T = 1;
 using namespace std;
 
 
-#define endl '\n'
-#define ff first 
-#define ss second
+#define endl "\n"
 #define int long long 
 #define double long double
 
 
 #define vi vector<int>
-#define pii pair<int,int>
-#define vpii vector<pii>
 #define sz(x) (int)x.size()
 #define each(x) for(auto &it:x)
 #define all(x) (x).begin(),(x).end()
@@ -25,15 +21,24 @@ using namespace std;
 #define fastIO cin.tie(0)->sync_with_stdio(0)
 
 
-#define read(n) int n;cin >> n;
-#define inVec(x,n) vi x(n);each(x) cin >> it;
+int T=1;
 
 
 auto solve = []() {
-	int n;
-    cin >> n;
+	int s,v1,v2,t1,t2;
+    cin >> s >> v1 >> v2 >> t1 >> t2;
 
-    cout << (n>11 ? "YES":"NO");
+    int a = s*v1+2*t1;
+    int b = s*v2+2*t2;
+    if(a==b) {
+        cout << "Friendship";
+    }
+    else if(a<b) {
+        cout << "First";
+    }
+    else {
+        cout << "Second";
+    }
 };
 
 

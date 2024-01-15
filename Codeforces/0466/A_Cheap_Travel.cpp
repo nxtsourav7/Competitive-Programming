@@ -1,6 +1,6 @@
 /**
  *	author 	: nxtsourav7
- *	created : 2024-01-14 00:42:35
+ *	created : 2023-12-31 09:04:06
 **/
 
 #include<bits/stdc++.h>
@@ -17,7 +17,6 @@ using namespace std;
 
 #define vi vector<int>
 #define pii pair<int,int>
-#define vpii vector<pii>
 #define sz(x) (int)x.size()
 #define each(x) for(auto &it:x)
 #define all(x) (x).begin(),(x).end()
@@ -25,34 +24,22 @@ using namespace std;
 #define fastIO cin.tie(0)->sync_with_stdio(0)
 
 
-#define read(n) int n;cin >> n;
-#define inVec(x,n) vi x(n);each(x) cin >> it;
-
-
 auto solve = []() {
-	int n,k;
-    string s;
-    cin >> n >> k >> s;
+	int n,m,a,b;
+    cin >> n >> m >> a >> b;
 
-    int cur = 0;
-    for(int i=0; i<n; ++i) {
-        if(s[i]=='0') {
-            if(cur>0) cur--;
-            else {
-                cout << "NO";
-                return;
-            }
-        }
-        else cur = k;
+    if((b/m)<a) {
+        cout << min((n/m+1)*b,(n/m)*b + (n%m)*a);
     }
-
-    cout << "YES";
+    else {
+        cout << n*a;
+    } 
 };
 
 
 int32_t main() {
 	fastIO;
-	cin >> T;
+	// cin >> T;
 	for(int t=1; t<=T; ++t) {
 		// cout << "Case #" << t << ": ";
 		solve();
