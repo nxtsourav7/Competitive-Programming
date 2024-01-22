@@ -5,6 +5,7 @@
 #executable
 *.out
 *.exe
+*.class
 
 #folder
 .vscode
