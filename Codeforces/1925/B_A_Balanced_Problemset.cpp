@@ -1,55 +1,50 @@
 /**
  *	author 	: nxtsourav7
- *	created : 2024-01-27 20:56:01
+ *	created : 2024-02-16 12:14:35
 **/
+
 
 #include<bits/stdc++.h>
 using namespace std;
 
-
 #define endl "\n"
-#define int long long 
-#define double long double
-
-
-#define vi vector<int>
-#define pii pair<int,int>
+#define ll long long 
 #define sz(x) (int)x.size()
-#define each(x) for(auto &it:x)
-#define all(x) (x).begin(),(x).end()
-#define rall(x) (x).rbegin(),(x).rend()
-#define fastIO cin.tie(0)->sync_with_stdio(0)
-
-
-auto solve = []() {
-	int x,n;
-    cin >> x >> n;
-
-    int ans = 1;
-    for(int i=1; i<=x; ++i) {
-        if(x%i == 0 && x/i >= n) {
-            ans = i;
-        }
-        if(x/i < n) {
-            break;
-        }
-    }
-
-    cout << ans ;
-};
+#define all(x) x.begin(), x.end()
+#define rall(x) x.rbegin(), x.rend()
 
 
 int32_t main() {
-	fastIO;
-	int T=1;
-	cin >> T;
-	/**
-	 *	fuck rating !! 
-	**/
-	for(int t=1; t<=T; ++t) {
-		// cout << "Case #" << t << ": ";
-		solve();
+    cin.tie(0)->sync_with_stdio(0);
+    cout << fixed << setprecision(12);
+
+
+    auto nxtsourav7 = []()->void {
+        int x, n;
+        cin >> x >> n;
+
+        int ans = 1;
+        for(int i=1; i<=sqrt(x); ++i) {
+            if(x%i == 0 ) {
+                if(x/i < n) break;
+                if(i < n) ans = i;
+                else {
+                    ans = x/i;
+                    break;
+                }
+            }
+        }
+        cout << ans;
+    };
+
+
+    bool Q = true;
+    int T = Q? (cin>>T, T) : 1;
+    for(int test=1; test<=T; ++test) {
+        // cout << "Case #" << test << ": ";
+        nxtsourav7();
         cout << endl;
-	}
-	return 0;
+    }
+    
+    return 0;
 }
