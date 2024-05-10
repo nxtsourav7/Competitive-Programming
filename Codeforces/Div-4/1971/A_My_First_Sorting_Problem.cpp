@@ -1,0 +1,34 @@
+/**
+ *	author 	: nxtsourav7
+ *	created : 2024-05-10 20:36:10
+**/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define endl "\n"
+#define int long long 
+#define sz(x) (int)x.size()
+#define all(x) x.begin(), x.end()
+#define rall(x) x.rbegin(), x.rend()
+
+int32_t main() {
+    cin.tie(0)->sync_with_stdio(0);
+
+    auto nxtsourav7 = []()->void {
+        int x, y;
+        cin >> x >> y;
+        // solve here
+        cout << min(x, y) << " " << max(x, y);
+    }; 
+
+    bool Q = true;
+    int T = Q? (cin>>T, T) : 1;
+    for(int test=1; test<=T; ++test) {
+        // cout << "Case #" << test << ": ";
+        nxtsourav7();
+        cout << endl;
+    }
+    
+    return 0;
+}
