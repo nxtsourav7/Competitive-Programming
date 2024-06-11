@@ -18,7 +18,6 @@ int32_t main() {
     auto nxtsourav7 = []()->void {
         int n; cin >> n;
         int one = INT32_MAX, two = INT32_MAX, three = INT32_MAX;
-
         while(n--) {
             int mnt; 
             string bit;
