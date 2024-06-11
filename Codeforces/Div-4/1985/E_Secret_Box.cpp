@@ -1,0 +1,44 @@
+/**
+ *	author 	: nxtsourav7
+ *	created : 2024-06-11 21:32:20
+**/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define endl "\n"
+#define int long long 
+#define sz(x) (int)x.size()
+#define all(x) x.begin(), x.end()
+#define rall(x) x.rbegin(), x.rend()
+
+int32_t main() {
+    cin.tie(0)->sync_with_stdio(0);
+
+    auto nxtsourav7 = []()->void {
+        int x, y, z, k;
+        cin >> x >> y >> z >> k;
+
+        int ans = 0;
+        for(int i = 1; i <= x; ++i) {
+            for(int j = 1; j <= z; ++j) {
+                int cur = k / (i*j);
+                if(k % (i*j) == 0 and cur <= y) {
+                    int psbl = (x-i+1)*(z-j+1)*(y-cur+1);
+                    ans = max(ans, psbl);
+                }
+            }
+        }
+        cout << ans;
+    };
+
+    bool Q = true;
+    int T = Q? (cin>>T, T) : 1;
+    for(int test=1; test<=T; ++test) {
+        // cout << "Case #" << test << ": ";
+        nxtsourav7();
+        cout << endl;
+    }
+    
+    return 0;
+}
