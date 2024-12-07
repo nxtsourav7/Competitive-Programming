@@ -24,7 +24,7 @@ int A[N], B[N]; // Less overhead so faster
 *   per test has 1E4 or more test case then makes it TLE !
 */
 
-void solve() {
+void solve() {  
     int n, m, k;
     cin >> n >> m >> k;
     vector<int> a(n), b(m);
