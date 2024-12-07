@@ -28,7 +28,7 @@ void solve() {
     int n, m, k;
     cin >> n >> m >> k;
     vector<int> a(n), b(m);
-    // int A[N], B[N]; // stack-overflow. total 16MB > 8MB(Stack Size)
+    // int A[N], B[N]; // stack-overflow for LL, WA for int , totally shit in local
     // vector<int> A(N), B(N); // TLE
     // map<int, int> A, B; // takes a lot of time(±500 ms)
     // static int A[N], B[N]; // [ok] like global use data segment and need cleanup
@@ -63,7 +63,7 @@ void solve() {
     }
     cout << ans;
 
-    // cleanup 
+    // // cleanup 
     for(auto it : b) {B[it] = 0;}
     for(int i = 0; i < m; ++i) {A[a[n - i - 1]] = 0;}
 }   
