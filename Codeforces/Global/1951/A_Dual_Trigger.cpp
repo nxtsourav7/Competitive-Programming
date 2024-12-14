@@ -1,6 +1,6 @@
 /**
  *	author 	: nxtsourav7
- *	created : 2024-12-14 14:57:44
+ *	created : 2024-12-14 15:24:32
 **/
 
 #include<bits/stdc++.h>
@@ -15,10 +15,21 @@ using namespace std;
 #define fastIO cin.tie(0)->sync_with_stdio(0)
 
 void solve() {
-    int a, b, m;
-    cin >> a >> b >> m;
-    
-    cout << 2 + m/a + m/b;
+    int n;      cin >> n;
+    string s;
+    cin >> s;
+    s += '0';
+    bool has_adj = false;
+    int cnt = 0;
+    for(int i = 0; i < n; ++i) {
+        if(s[i] == '1') {
+            cnt++;
+            if(s[i] == s[i + 1]) has_adj = true;
+        }
+    }
+
+    if((cnt & 1 ) || (cnt == 2 and has_adj)) cout << "NO";
+    else cout << "YES";
 }
 
 int32_t main() {
