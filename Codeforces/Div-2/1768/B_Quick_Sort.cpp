@@ -20,6 +20,7 @@ void solve() {
     vector<int> a(n);
     for(auto &it : a) {cin >> it;}
 
+    // find the maximal subsequence of the numbers [1,2,3…]
     int cnt = 0;
     bool flag = false;
     for(int i = 0; i < n; ++i) {
