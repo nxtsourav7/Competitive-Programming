@@ -14,7 +14,11 @@ using namespace std;
 #define test(T) for(int t = 1; t <= T; ++t)
 #define fastIO cin.tie(0)->sync_with_stdio(0)
 
-void solve() {}
+const int mod = 1e9 + 7;
+
+void solve() {
+    
+}
 
 int32_t main() {
     fastIO;
@@ -22,6 +26,7 @@ int32_t main() {
     int T = Q? (cin >> T, T) : 1;
     test(T) {
         solve();
+        cout << endl;
     }
     
     return 0;
