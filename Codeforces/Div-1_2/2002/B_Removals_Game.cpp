@@ -21,15 +21,14 @@ void solve() {
     for(auto &x : B) cin >> x;
 
     int l = 0, r = n-1;
+    // actually bob only win if a == b or reverse of a == b
     for(int i = 0; i < n; ++i) {
-
-            if(A[i] == B[l]) l++;
-            else if(A[i] == B[r]) r--;
-            else {
-                cout << "Alice";
-                return;
-            }
-        
+        if(A[i] == B[l]) l++;
+        else if(A[i] == B[r]) r--;
+        else {
+            cout << "Alice";
+            return;
+        }
     }
 
     l = 0, r = n-1;
