@@ -19,6 +19,7 @@ void solve() {
     cin >> n >> k;
 
     // key observation : always add k - 1 {1} in the multiset except the last operation
+    // so, ans is ceil of (n - 1) / (k - 1)
     n -= 1, k -= 1;
     cout << (n + k - 1) / k; 
 }
