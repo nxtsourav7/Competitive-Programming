@@ -1,6 +1,6 @@
 /**
  *	author 	: nxtsourav7
- *	created : 2025-01-01 00:04:12
+ *	created : 2024-12-31 22:37:01
 **/
 
 #include<bits/stdc++.h>
@@ -17,10 +17,15 @@ using namespace std;
 void solve() {
     int n, k;
     cin >> n >> k;
+    vector<pair<int, int>> a(n);
+    for(int i = 0; i < n; i++) {
+        cin >> a[i].first;
+        a[i].first = (a[i].first % k) ? a[i].first % k : k;
+        a[i].second = -i - 1;
+    }
 
-    // key observation : always add k - 1 {1} in the multiset except the last operation
-    n -= 1, k -= 1;
-    cout << (n + k - 1) / k; 
+    sort(rall(a));
+    echo(i, a) cout << -i.second << " ";
 }
 
 int32_t main() {
