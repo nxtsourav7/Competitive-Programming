@@ -1,6 +1,6 @@
 /**
- *  author : nxtsourav7
- *  created : 2024-07-15 21:42:53
+ *	author 	: nxtsourav7
+ *	created : 2025-01-01 10:16:18
 **/
 
 #include<bits/stdc++.h>
@@ -8,50 +8,37 @@ using namespace std;
 
 #define endl "\n"
 #define int long long 
-#define sz(x) (int)x.size()
-#define all(x) x.begin(), x.end()
-#define rall(x) x.rbegin(), x.rend()
+#define sz(x) (int)(x).size()
+#define echo(i, a) for(auto& i: a) 
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
+#define test(Q) int Q; cin >> Q; while(Q--)
+
+void solve() {
+    int n;
+    cin >> n;
+
+    if(__builtin_popcountll(n) == 1) {
+        cout << "1\n" << n;
+        return;
+    }
+
+    // key observation : reset bit from left to right satisfies the condition 
+    cout << __builtin_popcountll(n) + 1 << endl;
+    for(int i = 60; i >= 0; --i) {
+        if(n & (1LL << i)) {
+            cout << (n ^ (1LL << i)) << " ";
+        }
+    }
+    cout << n << " ";
+}
 
 int32_t main() {
-    cin.tie(0)->sync_with_stdio(0);
-
-    auto nxtsourav7 = []()->void {
-        int n; cin >> n;
-
-        if(!(n & (n-1))) {
-            cout << 1 << endl;
-            cout << n;
-            return;
-        }
-
-        vector<int> ans;
-        for(int j = 0; j <= __builtin_popcountll(n); ++j) {
-            int x = n, inverse = 0, skip = sz(ans);
-            for(int i = 60; i >= 0; --i) {
-                if((1LL << i)  & x) {
-                    if(skip == 0) {
-                        if(inverse % 2 == 0) {
-                            x = x & (~(1LL << i));
-                        }
-                        inverse++;
-                    }
-                    else skip--;
-                }
-            }
-            ans.push_back(x);
-        }
-
-        cout << sz(ans) << endl;
-        for(auto& it : ans) {cout << it << " ";}
-    };
-
-    bool Q = true;
-    int T = Q? (cin>>T, T) : 1;
-    for(int test=1; test<=T; ++test) {
-        // cout << "Case #" << test << ": ";
-        nxtsourav7();
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    test(Q) {
+        solve();
         cout << endl;
     }
-    
     return 0;
 }
